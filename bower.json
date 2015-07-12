@@ -1,0 +1,26 @@
+{
+  "name": "learn-angularjs",
+  "version": "1.0.0",
+  "description": "learn angularjs",
+  "keywords": [
+    "angularjs"
+  ],
+  "authors": [
+    "lcc"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-mocks": "~1.4.2",
+    "jasmine": "~2.3.4",
+    "jquery": "~2.1.4",
+    "angular": "~1.4.2",
+    "bootstrap-sass": "~3.3.5"
+  }
+}
