@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title hello
+    -var bowerPath = '../bower_components'
+  body
+    #container
+      div(ng-controller="HelloController")
+        h1(ng-bind="text")
+    script(src="#{bowerPath}/angular/angular.js")
+    script
+      :coffee
+        app = angular.module 'step1', []
+        app.controller 'HelloController', ['$scope', ($scope)->
+          $scope.text = 'Hello'
+        ]
+        angular.bootstrap document.getElementById('container'), ['step1']
