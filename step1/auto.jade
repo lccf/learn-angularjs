@@ -7,6 +7,7 @@ html
     #container(ng-app="step1")
       div(ng-controller="HelloController")
         h1(ng-bind="text")
+        h1 {{ text + ' World!'}}
     script(src="#{bowerPath}/angular/angular.js")
     script
       :coffee
