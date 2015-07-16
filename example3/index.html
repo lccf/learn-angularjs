@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>表达式</title>
+  </head>
+  <body>
+    <div ng-app="app">
+      <p><b>1 + 2 = </b><span ng-bind="1+2"></span></p>
+      <p><b>a + b = </b><span ng-bind="a+b">{{a}}</span></p>
+      <p><b>user.name: </b><span ng-bind="user.name"></span></p>
+      <p><b>items[0]: </b><span ng-bind="items[0]"></span></p>
+    </div>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script>(function() {
+  var app;
+
+  app = angular.module('app', []).run(function($rootScope) {
+    $rootScope.a = 'a';
+    $rootScope.b = 'b';
+    $rootScope.user = {
+      name: 'leaf'
+    };
+    $rootScope.items = ['item0', 'item1'];
+  });
+
+}).call(this);
+
+    </script>
+  </body>
+</html>

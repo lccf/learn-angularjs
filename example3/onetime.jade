@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title 表达式
+    -var bowerPath = '../bower_components'
+  body
+    div(ng-app, ng-init="name='leaf'")
+      p
+        b name: 
+        input(type="text", ng-model="name")
+      p
+        b bind: 
+        span(ng-bind="name")
+      p
+        b one time bind: 
+        span(ng-bind="::name")
+
+    script(src="#{bowerPath}/angular/angular.js")
