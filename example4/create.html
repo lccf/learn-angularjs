@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>创建指令</title>
+  </head>
+  <body>
+    <div ng-app="docsSimpleDirective">
+      <div ng-controller="Controller">
+        <div my-customer></div>
+      </div>
+    </div>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script>
+      angular.module('docsSimpleDirective', []).controller('Controller', ['$scope', function($scope) {
+        $scope.customer = {
+          name: 'Naomi',
+          address: '1600 Amphitheatre'
+        };
+      }])
+      .directive('myCustomer', function() {
+        return {
+          template: 'Name: {{customer.name}} Address: {{customer.address}}'
+        };
+      });
+    </script>
+  </body>
+</html>

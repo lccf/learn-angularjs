@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    title 指令
+    -var bowerPath = '../bower_components'
+  body
+    div(ng-app ng-init="site='华住'; link='http://www.huazhu.com'; myattr=123")
+      p
+        b ng-href: 
+        a(ng-href="{{link}}" ng-bind="site")
+      p
+        b 自定义属性 myattr
+        span(ng-attr-myattr="{{myattr}}")
+    script(src="#{bowerPath}/angular/angular.js")
+    script
+      :coffee
+        app = angular.module('app', [])
+        .run ($rootScope) ->
+          $rootScope.a = 'a'
+          $rootScope.b = 'b'
+          $rootScope.user =
+            name: 'leaf'
+          $rootScope.items = [
+            'item0'
+            'item1'
+          ]
+          return
+

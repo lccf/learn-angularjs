@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>指令</title>
+  </head>
+  <body>
+    <div ng-app ng-init="site='华住'; link='http://www.huazhu.com'; myattr=123">
+      <p><b>ng-href: </b><a ng-href="{{link}}" ng-bind="site"></a></p>
+      <p><b>自定义属性 myattr</b><span ng-attr-myattr="{{myattr}}"></span></p>
+    </div>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script>(function() {
+  var app;
+
+  app = angular.module('app', []).run(function($rootScope) {
+    $rootScope.a = 'a';
+    $rootScope.b = 'b';
+    $rootScope.user = {
+      name: 'leaf'
+    };
+    $rootScope.items = ['item0', 'item1'];
+  });
+
+}).call(this);
+
+    </script>
+  </body>
+</html>
