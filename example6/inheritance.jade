@@ -1,0 +1,33 @@
+doctype html
+html
+  head
+    title 私有函数
+    -var bowerPath = '../bower_components'
+    style.
+      .spicy div {
+        border: 1px solid blue;
+        padding: 10px;
+      }
+  body
+    div(ng-app="scopeInheritance")
+      .spicy
+        div(ng-controller='MainController')
+          p Good {{timeOfDay}}, {{name}}!
+          div(ng-controller='ChildController')
+            p Good {{timeOfDay}}, {{name}}!
+            div(ng-controller='GrandChildController')
+              p Good {{timeOfDay}}, {{name}}!
+    script(src="#{bowerPath}/angular/angular.js")
+    script.
+      var myApp = angular.module('scopeInheritance', []);
+      myApp.controller('MainController', ['$scope', function($scope) {
+      $scope.timeOfDay = 'morning';
+      $scope.name = 'Nikki';
+      }]);
+      myApp.controller('ChildController', ['$scope', function($scope) {
+      $scope.name = 'Mattie';
+      }]);
+      myApp.controller('GrandChildController', ['$scope', function($scope) {
+      $scope.timeOfDay = 'evening';
+      $scope.name = 'Gingerbread Baby';
+      }]);

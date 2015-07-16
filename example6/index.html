@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>私有函数</title>
+  </head>
+  <body>
+    <div ng-app="myApp">
+      <div ng-controller="DoubleController">Two times
+        <input ng-model="num">equals {{ double(num) }}
+      </div>
+    </div>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script>
+      var myApp = angular.module('myApp',[]);
+      
+      myApp.controller('DoubleController', ['$scope', function($scope) {
+        $scope.num = 1;
+        $scope.double = function(value) { return value * 2; };
+      }]);
+    </script>
+  </body>
+</html>
