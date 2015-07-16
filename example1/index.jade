@@ -10,7 +10,7 @@ html
     script(src="#{bowerPath}/angular/angular.js")
     script
       :coffee
-        app = angular.module 'step1', []
+        app = angular.module 'example1', []
         app.controller 'HelloController', ['$scope', ($scope)->
           $scope.text = 'Hello'
         ]
