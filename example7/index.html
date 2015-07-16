@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>私有函数</title>
+    <style>
+      .spicy div {
+        border: 1px solid blue;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app" ng-app="myApp" style="height: 200px;">
+      <div ng-controller="PasswordController">
+        <input type="password" ng-model="password" ng-change="grade()"><span>strength: {{strength}}</span>
+      </div>
+    </div>
+    <script src="../bower_components/angular/angular.js"></script>
+    <link rel="stylesheet" href="../bower_components/jasmine/lib/jasmine-core/jasmine.css">
+    <script src="../bower_components/jasmine/lib/jasmine-core/jasmine.js"></script>
+    <script src="../bower_components/jasmine/lib/jasmine-core/jasmine-html.js"></script>
+    <script src="../bower_components/jasmine/lib/jasmine-core/boot.js"></script>
+    <script src="../bower_components/angular-mocks/angular-mocks.js"></script>
+    <script src="app.js"></script>
+    <script src="test.js"></script>
+  </body>
+</html>

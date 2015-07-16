@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title 私有函数
+    -var bowerPath = '../bower_components'
+    style.
+      .spicy div {
+        border: 1px solid blue;
+        padding: 10px;
+      }
+  body
+    #app(ng-app='myApp', style='height: 200px;')
+      div(ng-controller='PasswordController')
+        input(type='password', ng-model='password', ng-change='grade()')
+        span strength: {{strength}}
+    script(src="#{bowerPath}/angular/angular.js")
+    link(rel="stylesheet" href="#{bowerPath}/jasmine/lib/jasmine-core/jasmine.css")
+    script(src="#{bowerPath}/jasmine/lib/jasmine-core/jasmine.js")
+    script(src="#{bowerPath}/jasmine/lib/jasmine-core/jasmine-html.js")
+    script(src="#{bowerPath}/jasmine/lib/jasmine-core/boot.js")
+    script(src="#{bowerPath}/angular-mocks/angular-mocks.js")
+    script(src="app.js")
+    script(src="test.js")
