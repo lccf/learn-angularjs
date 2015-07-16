@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title 创建指令
+    -var bowerPath = '../bower_components'
+  body
+    div(ng-app="myApp")
+      div {{ 'World' | greet }}
+    script(src="#{bowerPath}/angular/angular.js")
+    script.
+      var myAppModule = angular.module('myApp', []);
+      myAppModule.filter('greet', function() {
+       return function(name) {
+          return 'Hello, ' + name + '!';
+        };
+      });
