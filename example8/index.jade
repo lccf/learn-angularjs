@@ -1,0 +1,15 @@
+doctype html
+html(ng-app="myApp")
+  head
+    title e2e test
+    -var bowerPath = '../bower_components'
+  body
+    #app(style='height: 200px;')
+      div(ng-controller='PasswordController')
+        input(type='password', ng-model='password', ng-change='grade()')
+        div
+          |strength:
+          span(ng-bind="strength")
+    //script(src="../bower_components/angular-mocks/angular-mocks.js")
+    script(src="#{bowerPath}/angular/angular.js")
+    script(src="app.js")

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <title>e2e test</title>
+  </head>
+  <body>
+    <div id="app" style="height: 200px;">
+      <div ng-controller="PasswordController">
+        <input type="password" ng-model="password" ng-change="grade()">
+        <div>strength:<span ng-bind="strength"></span></div>
+      </div>
+    </div>
+    <!--script(src="../bower_components/angular-mocks/angular-mocks.js")-->
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
