@@ -49,4 +49,3 @@ browser-sync start --server --no-open
 # 执行测试
 protractor conf.js
 ```
-## 示例说明
