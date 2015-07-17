@@ -1,6 +1,6 @@
 # learn-angularjs
 
-## 实例说明
+## 示例说明
 - 基础实例 example1/index.html
 - 基础实例-自动启动 example1/auto.html
 - 数据绑定 example2/index.html
