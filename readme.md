@@ -1,6 +1,6 @@
 # learn-angularjs
 
-## 示例说明
+## 实例说明
 - 基础实例 example1/index.html
 - 基础实例-自动启动 example1/auto.html
 - 数据绑定 example2/index.html
@@ -24,7 +24,7 @@ browser-sync start --server
 示例代码为example7
 
 ```bash
-# 安装基础
+# 安装基础包
 npm install karma-cli -g
 npm install
 
@@ -49,3 +49,4 @@ browser-sync start --server --no-open
 # 执行测试
 protractor conf.js
 ```
+## 示例说明
