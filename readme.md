@@ -17,8 +17,7 @@
 ```bash
 npm install browser-sync -g
 # 启动本地web服务器
-browser-sync start
-
+browser-sync start --server
 ```
 
 ## 使用karma测试
