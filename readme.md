@@ -1,9 +1,28 @@
 # learn-angularjs
 
-## 说明
-example1-6 基础示例、example7 unit test、example8 E2E test
+## 示例说明
+- 基础实例 example1/index.html
+- 基础实例-自动启动 example1/auto.html
+- 数据绑定 example2/index.html
+- 表达式 example3/index.html
+- 表达式-单次绑定 example3/onetime.html
+- 指令 example4/index.html
+- 自定义指令 example4/create.html
+- 过滤器 example5/index.html
+- 私有函数 example6/index.html
+- 多重作用域 example6/inheritance.html
+- 单元测试 example7/index.html
 
-## 使用karma测试example7
+## 查看
+```bash
+npm install browser-sync -g
+# 启动本地web服务器
+browser-sync start
+
+```
+
+## 使用karma测试
+示例代码为example7
 
 ```bash
 # 安装基础
@@ -16,11 +35,12 @@ karma start karma start karma.conf.js
 karma start karma.conf.js --browsers PhantomJS
 ```
 
-## 使用protractor测试example8
+## 使用protractor测试
+示例代码为example8
 
 ```bash
 # 安装browser-sync和protractor
-npm install protractor browser-sync -g
+npm install protractor -g
 # 升用 webdriver
 webdriver-manager update
 # 启动webdriver
