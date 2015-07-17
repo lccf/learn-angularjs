@@ -15,4 +15,18 @@ karma start karma start karma.conf.js
 # 指定使用PhantomJS执行测试代码
 karma start karma.conf.js --browsers PhantomJS
 ```
-## 使用Protractor测试example8
+
+## 使用protractor测试example8
+
+```bash
+# 安装browser-sync和protractor
+npm install protractor browser-sync -g
+# 升用 webdriver
+webdriver-manager update
+# 启动webdriver
+webdriver-manager start
+# 启动本地web服务器
+browser-sync start --server --no-open
+# 执行测试
+protractor conf.js
+```
